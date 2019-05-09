@@ -19,8 +19,8 @@ shinyUI(fluidPage( #create the overall page
                    "Choose a trait to display:",
                    c("gaps",
                      "len",
-                     "E",
-                     "Score")
+                     "Score",
+                     "qb")
       )),
     
     # Show a plot of the generated distribution
