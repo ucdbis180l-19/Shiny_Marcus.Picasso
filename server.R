@@ -30,9 +30,8 @@ colnames(worm_plant) <- c("query_id",
                           "E",
                           "Score")
 
-worm_plant <- worm_plant %>% filter(E ==0)
-
-worm_plant <- worm_plant %>% mutate(logE = log10(E))
+worm_plant <- worm_plant %>% filter(E == 0)
+plant_worm <- plant_worm %>% filter(E == 0)
 
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
@@ -47,15 +46,21 @@ shinyServer(function(input, output) {
   output$boxPlot <- renderPlot({
     
     # set up the plot
-    pl_worm_plant <- ggplot(data = worm_plant,
+    pl_worm_plant <- ggplot(data= worm_plant,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted 
                  aes_string(x= "pct_ident > 50",
                             y=input$trait
                  )
     )
-    
-    # draw the boxplot for the specified trait
     pl_worm_plant + geom_boxplot()
+  })
+  output$boxPlot2 <- renderPlot({
+    # draw the boxplot for the specified trait
+   
+    
+    pl_plant_worm <- ggplot(data = plant_worm, aes_string(x = "pct_ident > 50",
+                                                          y = input$trait))
+    pl_plant_worm + geom_boxplot()
   })
 })
