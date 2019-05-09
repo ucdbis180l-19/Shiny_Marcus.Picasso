@@ -15,7 +15,7 @@ shinyUI(fluidPage( #create the overall page
            "Our hypothesis is that E-Values of 0 from sequences with less than %50 identity are relatively longer", 
            "sequences than those who are greater than %50 identity.",
            "As you can see from the boxplots of alignments whom recorded an E-value of 0, those that have less than", 
-           "50% identity have greater sequence length.")
+           "50% identity have greater sequence length."),
   
   # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
