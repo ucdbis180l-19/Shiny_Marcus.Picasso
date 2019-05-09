@@ -65,7 +65,7 @@ shinyServer(function(input, output) {
     # set up the plot
     pl_worm_plant <- ggplot(data = worm_plant_best,
                  #Use aes_string below so that input$trait is interpreted
-                 #correctly.  The other variables need to be quoted
+                 #correctly.  The other variables need to be quoted 
                  aes(x=len,
                     y=input$trait,
                     color = pct_ident
