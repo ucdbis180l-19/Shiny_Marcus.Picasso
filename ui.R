@@ -11,7 +11,7 @@ shinyUI(fluidPage( #create the overall page
            "iris species.  Please use the radio box below to choose a trait",
            "for plotting"),
   
-  # Sidebar with a radio box to input which trait will be plotted
+  # Sidebar with a radio box to input which trait will be plotted a
   sidebarLayout(
     sidebarPanel(
       radioButtons("trait", #the input variable that the value will go into
