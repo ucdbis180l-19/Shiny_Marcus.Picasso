@@ -4,14 +4,15 @@ library(shiny)
 shinyUI(fluidPage( #create the overall page
   
   # Application title
-  titlePanel("Iris Data"),
+  titlePanel("How do Alignment Properties affect E-value?",
+"A. thaliana (Plant) versus C. elegans (Worm) Proteomes"),
   
   # Some helpful information
-  helpText("This application creates a boxplot to show difference between",
-           "iris species.  Please use the radio box below to choose a trait",
-           "for plotting"),
+  helpText("This application creates multiple boxplots to show how alignment properties can influence E-value.",
+           "We are interested in testing the hypothesis that an E-value of 0 can be obtained even in alignments", 
+           "where there is less than 50% identity between sequences"),
   
-  # Sidebar with a radio box to input which trait will be plotted a
+  # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
     sidebarPanel(
       radioButtons("trait", #the input variable that the value will go into
