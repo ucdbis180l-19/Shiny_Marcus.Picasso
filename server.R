@@ -1,6 +1,8 @@
 library(shiny)
 library(ggplot2)
 
+# Hi marcus
+
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
   
