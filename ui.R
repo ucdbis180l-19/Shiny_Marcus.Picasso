@@ -16,10 +16,10 @@ shinyUI(fluidPage( #create the overall page
     sidebarPanel(
       radioButtons("trait", #the input variable that the value will go into
                    "Choose a trait to display:",
-                   c("Sepal.Length",
-                     "Sepal.Width",
-                     "Petal.Length",
-                     "Petal.Width")
+                   c("gaps",
+                     "len",
+                     "E",
+                     "Score")
       )),
     
     # Show a plot of the generated distribution
