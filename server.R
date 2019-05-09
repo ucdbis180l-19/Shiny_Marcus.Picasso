@@ -53,7 +53,7 @@ shinyServer(function(input, output) {
                             y=input$trait
                  )
     )
-    pl_worm_plant + geom_boxplot()
+    pl_worm_plant + geom_boxplot(fill = "red") + ggtitle("Worm blasted to plant")
   })
   output$boxPlot2 <- renderPlot({
     # draw the boxplot for the specified trait
@@ -61,6 +61,6 @@ shinyServer(function(input, output) {
     
     pl_plant_worm <- ggplot(data = plant_worm, aes_string(x = "pct_ident > 50",
                                                           y = input$trait))
-    pl_plant_worm + geom_boxplot()
+    pl_plant_worm + geom_boxplot(fill = "green") + ggtitle("Plant blasted to worm")
   })
 })
